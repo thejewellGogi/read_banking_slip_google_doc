@@ -1,5 +1,5 @@
 name: read_banking_slip
-description: "Slip Reader with Tesseract OCR"
+description: "A new Flutter project."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -11,8 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # 🔥 ใช้ Tesseract ตัวเดียว
   flutter_tesseract_ocr: ^0.4.28
+  # OCR
+  tesseract_ocr:
+    path: plugins/tesseract_ocr/tesseract_ocr-0.5.0
+  
+  google_mlkit_text_recognition: ^0.15.0   # ✅ ล่าสุดจริง
 
   # State management
   provider: ^6.1.2
@@ -28,12 +32,13 @@ dependencies:
   shared_preferences: ^2.3.2
   image: ^4.2.0
 
-  # Media
+  # Media & OCR
   image_picker: ^1.1.2
-
+  
   # Permissions
   permission_handler: ^11.3.1
 
+  # Optional
   cupertino_icons: ^1.0.8
   flutter_localizations:
     sdk: flutter
@@ -41,11 +46,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^4.0.0   # ✅ รองรับ SDK 3.9
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/tessdata/
     - assets/tessdata_config.json
+    # - assets/tessdata/tha.traineddata
+    # - assets/tessdata/eng.traineddata
+

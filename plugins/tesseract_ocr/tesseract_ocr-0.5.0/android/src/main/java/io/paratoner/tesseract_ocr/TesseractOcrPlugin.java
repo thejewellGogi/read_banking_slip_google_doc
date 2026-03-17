@@ -96,7 +96,8 @@ public class TesseractOcrPlugin implements MethodCallHandler, FlutterPlugin {
                         "Failed to initialize Tesseract: " + e.getMessage(),
                         null
                     );
-                    baseApi.recycle();
+                    // baseApi.recycle();
+                    baseApi.end();
                 }
                 break;
             default:
@@ -135,7 +136,8 @@ class MyRunnable implements Runnable {
         } else {
             recognizedText[0] = this.baseApi.getUTF8Text();
         }
-        this.baseApi.recycle();
+        // this.baseApi.recycle();
+        this.baseApi.end();
         this.sendSuccess(recognizedText[0]);
     }
 
