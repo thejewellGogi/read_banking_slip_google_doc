@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'features/shell/bottom_shell.dart';
 
+import 'features/sources/screen_load_slip.dart';
 class SlipReaderApp extends StatelessWidget {
   const SlipReaderApp({super.key});
 
@@ -29,7 +30,7 @@ class SlipReaderApp extends StatelessWidget {
         colorSchemeSeed: const Color(0xFF0B1B3A),
         scaffoldBackgroundColor: const Color(0xFFF6F7FB),
       ),
-      home: const BottomShell(),
+      home: const ScreenLoadSlip(),
     );
   }
 }

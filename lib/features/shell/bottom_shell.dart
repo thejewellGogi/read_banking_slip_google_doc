@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import '../expenses/expenses_screen.dart';
-import '../sources/source_screen.dart';
-import '../../ocr/gallery/auto_ocr_runner.dart';
+// import '../sources/source_screen.dart';
+// import '../../ocr/gallery/auto_ocr_runner.dart';
+// import '../sources/screen_load_slip.dart';
+import '../slips/slips_screen.dart';
 class BottomShell extends StatefulWidget {
   const BottomShell({super.key});
 
   @override
   State<BottomShell> createState() => _BottomShellState();
 }
+
+
 
 class _BottomShellState extends State<BottomShell> {
   int index = 0;
@@ -23,7 +27,7 @@ class _BottomShellState extends State<BottomShell> {
   }
   final pages = const [
     ExpensesScreen(),
-    SourceScreen(),
+    SlipsScreen(),
     _SettingsStub(),
   ];
 
